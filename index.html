@@ -12,6 +12,7 @@
         color: #3a4145;
         font-size: 14px;
         padding: 1em;
+        user-select: none;
       }
       .title {
         font-size: 16px;
@@ -52,8 +53,16 @@
 新年愿望:大吉大利，有钱有你，足矣。
 敬长辈，爱少年，欢天喜地不夜天。`.split('\n');
 
-      document.querySelector('.desc').innerHTML =
-        data[getRandomInt(data.length)];
+      updateDesc();
+
+      document.addEventListener('click', () => {
+        updateDesc();
+      });
+
+      function updateDesc() {
+        document.querySelector('.desc').innerHTML =
+          data[getRandomInt(data.length)];
+      }
 
       function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
