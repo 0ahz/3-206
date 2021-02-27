@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <title>🍻</title>
+    <title>Hi there 👋</title>
     <style>
       body {
         font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial,
@@ -14,11 +14,25 @@
         font-size: 17px;
         padding: 1em;
         user-select: none;
-        background-color: #fefdf8;
+        background: #fefdf8;
+      }
+      html.dark > body {
+        color: #c9d1d9;
+        background: rgb(53, 54, 58);
       }
     </style>
+    <script>
+      let darkMatch = window.matchMedia('(prefers-color-scheme: dark)');
+      toggleDarkMode(darkMatch.matches);
+      darkMatch.addListener((e) => {
+        toggleDarkMode(e.matches);
+      });
+      function toggleDarkMode(matches) {
+        document.documentElement.classList.toggle('dark', !!matches);
+      }
+    </script>
   </head>
   <body>
-    <p>Happy New Year.</p>
+    <p>Hi there&nbsp;&nbsp;👋</p>
   </body>
 </html>
