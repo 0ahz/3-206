@@ -4,5 +4,6 @@
 
 html,
 body {
+  @apply h-full;
   text-size-adjust: 100% !important;
 }
