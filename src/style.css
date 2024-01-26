@@ -7,3 +7,31 @@ body {
   @apply h-full;
   text-size-adjust: 100% !important;
 }
+
+.shine-text {
+  font-family: 'SF Pro Rounded', ui-rounded;
+  background: linear-gradient(
+    to right,
+    #ff6b6b,
+    #ffa06a,
+    #f3ff6d,
+    #72ff6a,
+    #72ffcc,
+    #72cfff,
+    #b072ff,
+    #ff72f2
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
