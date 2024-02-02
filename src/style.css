@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'SourceHanSerifCN-Bold';
+  src: url(/dist/SourceHanSerifCN-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html,
 body {
   @apply h-full;
@@ -9,7 +17,6 @@ body {
 }
 
 .shine-text {
-  font-family: 'SF Pro Rounded', ui-rounded;
   background: linear-gradient(
     to right,
     #ff6b6b,
