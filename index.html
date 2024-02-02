@@ -36,9 +36,11 @@
     <title>今天是星期五吗？</title>
   </head>
   <body
-    class="pointer-events-none touch-none select-none bg-[#ededed] pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] font-['SourceHanSerifCN-Bold'] antialiased dark:bg-[#111111] dark:text-white/80"
+    class="touch-none select-none bg-[#ededed] pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] font-['SourceHanSerifCN-Bold'] antialiased dark:bg-[#111111] dark:text-white/80"
   >
-    <div class="flex h-full flex-col items-center justify-between p-4">
+    <div
+      class="pointer-events-none flex h-full flex-col items-center justify-between p-4"
+    >
       <div class="flex flex-1 items-center justify-center gap-2">
         <div class="space-y-4 text-center font-medium tracking-wide">
           <div id="is-friday" class="shine-text text-2xl"></div>
@@ -104,7 +106,7 @@
           const x = randomInRange(width / 3, width - width / 4);
           const y = randomInRange(height / 3, height - height / 4);
           showConfetti(x, y);
-        }, 2000);
+        }, 3000);
       };
 
       if (todayIsFriday) {
