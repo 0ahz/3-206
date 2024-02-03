@@ -17,6 +17,8 @@
     <script src="/dist/confetti.browser.min.js"></script>
     <script>
       (function () {
+        /micromessenger/i.test(navigator.userAgent) &&
+          document.documentElement.classList.add('wechat');
         function toggleDarkMode(isDark) {
           if (isDark) {
             document.documentElement.classList.add('dark');
@@ -36,7 +38,7 @@
     <title>今天是星期五吗？</title>
   </head>
   <body
-    class="touch-none select-none bg-[#ededed] pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] font-['SourceHanSerifCN-Bold'] antialiased dark:bg-[#111111] dark:text-white/80"
+    class="touch-none select-none bg-white pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] font-['SourceHanSerifCN-Bold'] antialiased dark:bg-[#111111] dark:text-white/80"
   >
     <div
       class="pointer-events-none flex h-full flex-col items-center justify-between p-4"
@@ -113,7 +115,7 @@
         startIntervalConfetti();
       }
 
-      window.addEventListener('click', function (e) {
+      document.body.addEventListener('click', function (e) {
         showConfetti(e.pageX, e.pageY);
       });
     </script>
