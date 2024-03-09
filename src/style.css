@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'SourceHanSerifCN-Bold';
-  src: url(/dist/SourceHanSerifCN-Bold.ttf) format('truetype');
+  src: url(/SourceHanSerifCN-Bold.ttf) format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 html,
 body {
-  @apply h-full;
+  @apply h-screen;
   text-size-adjust: 100% !important;
   --develop-start-gradient: oklch(59.59% 0.24 255.09156059071347);
   --develop-end-gradient: oklch(81.58% 0.189 190.74037768509325);
@@ -69,4 +69,8 @@ html.wechat body {
   100% {
     background-position: 100% 50%;
   }
+}
+
+#app {
+  @apply h-screen;
 }
