@@ -72,5 +72,5 @@ html.wechat body {
 }
 
 #app {
-  @apply h-screen;
+  @apply h-svh;
 }
