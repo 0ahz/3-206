@@ -12,7 +12,6 @@
 
 html,
 body {
-  @apply h-screen;
   text-size-adjust: 100% !important;
   --develop-start-gradient: oklch(59.59% 0.24 255.09156059071347);
   --develop-end-gradient: oklch(81.58% 0.189 190.74037768509325);
@@ -69,8 +68,4 @@ html.wechat body {
   100% {
     background-position: 100% 50%;
   }
-}
-
-#app {
-  @apply h-svh;
 }
